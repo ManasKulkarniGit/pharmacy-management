@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Personal Information</legend>
+                <div class="form-group">
+                    {{ form.prescription_id.label(class="form-control-label") }}
+
+                    {% if form.prescription_id.errors %}
+                        {{ form.prescription_id(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.prescription_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.prescription_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                
+
+                
+                
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

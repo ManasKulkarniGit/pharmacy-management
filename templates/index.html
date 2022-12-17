@@ -1,0 +1,29 @@
+{%extends "layout.html" %}
+{% block content %}
+
+
+<div class="col-md-12">
+    <div class="btn-group btn-group-lg btn-group-toggle">
+        <a class="btn btn-info" href="{{ url_for('show_customer') }}"> CUSTOMER </a>
+    </div>
+    <div class="btn-group btn-group-lg btn-group-toggle">
+        <a class="btn btn-info" href="{{ url_for('show_prescription') }}"> PRESCRIPTION </a>
+    </div>
+    <div class="btn-group btn-group-lg btn-group-toggle">
+        <a class="btn btn-info" href="{{ url_for('bill_generate') }}"> BILL </a>
+    </div>
+</div>
+<br></br>
+
+    <div class="col-md-4 float-right">
+        <div class="content-section">
+            <h3>Administrative</h3>
+            <p class='text-muted'>Admin access only. </p>
+            <div class="btn-group-vertical btn-group-lg btn-group-toggle">
+                <a class="btn btn-secondary" href="{{ url_for('show_employee') }}">Add Employee</a>
+                <a class="btn btn-secondary" href="{{ url_for('medicines') }}">Medicines</a>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}

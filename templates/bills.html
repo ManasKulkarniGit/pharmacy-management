@@ -1,0 +1,36 @@
+{%extends "layout.html" %}
+{% block content %}
+
+<h3>Bills</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Prescription ID</th>
+            <th scope="col">Total amount</th>
+            <th scope="col">Customer Pay</th>
+            <th scope="col">Insurance Pay</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for order_id, prescription_id, Total_amount, cust_pay,ins_pay in table %}
+        <tr>
+            <td>{{ order_id }}</td>
+            <td>{{ prescription_id }}</td>
+            <td>{{ Total_amount }}</td>
+            <td>{{ cust_pay }}</td>
+            <td>{{ ins_pay }}</td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+<br></br>
+<br></br>
+
+
+
+
+{% endblock content %}

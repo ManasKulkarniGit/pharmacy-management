@@ -1,0 +1,40 @@
+{%extends "layout.html" %}
+{% block content %}
+
+<h3>Customer</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">SSN</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone_no</th>
+            <th scope="col">Gender</th>
+            <th scope="col">DOB</th>
+            <!-- <th scope="col">Insurance_ID</th> -->
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for SSN, name, phone, gender, dob in table %}
+        <tr>
+            <td>{{ SSN }}</td>
+            <td>{{ name }}</td>
+            <td>{{ phone }}</td>
+            <td>{{ gender }}</td>
+            <td>{{ dob }}</td>
+            <!-- <td>{{ insurance_id }}</td> -->
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+<br></br>
+<br></br>
+
+<div>
+    <a class="btn btn-primary" href="{{ url_for('add_customer') }}" role="button">ADD/UPDATE</a>
+</div>
+
+
+{% endblock content %}

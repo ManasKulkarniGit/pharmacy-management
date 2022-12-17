@@ -1,0 +1,40 @@
+{%extends "layout.html" %}
+{% block content %}
+
+<h3>Customer</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Drug Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Manufacturer</th>
+            <th scope="col">Stock Quantity</th>
+            <th scope="col">Exp Date</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for drug_name, type, manuf, stock_qt, exp_date,price in table %}
+        <tr>
+            <td>{{ drug_name }}</td>
+            <td>{{ type }}</td>
+            <td>{{ manuf }}</td>
+            <td>{{ stock_qt }}</td>
+            <td>{{ exp_date }}</td>
+            <td>{{ price }}</td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+<br></br>
+<br></br>
+
+<div>
+    <a class="btn btn-primary" href="{{ url_for('add_medicine') }}" role="button">ADD/UPDATE</a>
+</div>
+
+
+{% endblock content %}

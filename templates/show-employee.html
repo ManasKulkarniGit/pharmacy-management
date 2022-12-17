@@ -1,0 +1,46 @@
+{%extends "layout.html" %}
+{% block content %}
+
+<h3>Employee</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Password</th>
+            <th scope="col">License</th>
+            <th scope="col">Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">salary</th>
+            <th scope="col">Phone_no</th>
+            <th scope="col">DOB</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for ID, password, license, name, role, salary, phone_no,dob in table %}
+        <tr>
+            <td>{{ ID }}</td>
+            <td>{{ password }}</td>
+            <td>{{ license }}</td>
+            <td>{{ name }}</td>
+            <td>{{ role }}</td>
+            <td>{{ salary }}</td>
+            <td>{{ phone_no }}</td>
+            <td>{{ dob }}</td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+<br></br>
+<br></br>
+
+<div>
+    <a class="btn btn-primary" href="{{ url_for('add_employee') }}" role="button">ADD/UPDATE</a>
+</div>
+
+
+
+
+{% endblock content %}

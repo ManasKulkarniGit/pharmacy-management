@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Personal Information</legend>
+                <div class="form-group">
+                    {{ form.prescription_id.label(class="form-control-label") }}
+
+                    {% if form.prescription_id.errors %}
+                        {{ form.prescription_id(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.prescription_id.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.prescription_id(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <h3>Enter Upto 5 drug names</h3>
+                <div class="form-group">
+                    {{ form.drug_name1.label(class="form-control-label") }}
+
+                    {% if form.drug_name1.errors %}
+                        {{ form.drug_name1(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.drug_name1.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.drug_name1(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.quantity1.label(class="form-control-label") }}
+
+                    {% if form.quantity1.errors %}
+                        {{ form.quantity1(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.quantity1.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.quantity1(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.drug_name2.label(class="form-control-label") }}
+
+                    {% if form.drug_name2.errors %}
+                        {{ form.drug_name2(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.drug_name1.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.drug_name2(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.quantity2.label(class="form-control-label") }}
+
+                    {% if form.quantity2.errors %}
+                        {{ form.quantity2(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.quantity2.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.quantity2(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.drug_name3.label(class="form-control-label") }}
+
+                    {% if form.drug_name3.errors %}
+                        {{ form.drug_name3(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.drug_name3.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.drug_name3(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.quantity3.label(class="form-control-label") }}
+
+                    {% if form.quantity3.errors %}
+                        {{ form.quantity3(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.quantity3.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.quantity3(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.drug_name4.label(class="form-control-label") }}
+
+                    {% if form.drug_name4.errors %}
+                        {{ form.drug_name4(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.drug_name1.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.drug_name4(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.quantity4.label(class="form-control-label") }}
+
+                    {% if form.quantity4.errors %}
+                        {{ form.quantity4(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.quantity1.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.quantity4(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.drug_name5.label(class="form-control-label") }}
+
+                    {% if form.drug_name5.errors %}
+                        {{ form.drug_name5(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.drug_name5.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.drug_name5(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.quantity5.label(class="form-control-label") }}
+
+                    {% if form.quantity5.errors %}
+                        {{ form.quantity5(class="form-control form-control-lg is-invalprescription_id") }}
+                        <div class="invalprescription_id-feedback">
+                            {% for error in form.quantity5.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.quantity5(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

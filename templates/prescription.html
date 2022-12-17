@@ -1,0 +1,51 @@
+{%extends "layout.html" %}
+{% block content %}
+
+<h3>Prescriptions</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Prescription ID</th>
+            <th scope="col">SSN</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">Prescription Date</th>
+            <th scope="col">Employee ID</th>
+            <!-- <th scope="col">Insurance_ID</th> -->
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for prescription_id, SSN, doc_name, pres_date, ID in table %}
+        <tr>
+            <td>{{ prescription_id }}</td>
+            <td>{{ SSN }}</td>
+            <td>{{ doc_name }}</td>
+            <td>{{ pres_date }}</td>
+            <td>{{ ID }}</td>
+            <!-- <td>{{ insurance_id }}</td> -->
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+<br></br>
+<br></br>
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <a class="btn btn-primary" href="{{ url_for('add_prescription') }}" role="button">ADD/UPDATE</a>
+</div>
+
+
+{% endblock content %}
